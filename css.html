@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Using CSS</title>
+    <link rel="stylesheet" href="/style.css">
+    
+    <style>
+        /*
+        selector {
+            css ozelligi: value;
+        }
+        */
+        h1{
+            color: aqua ;  /* eger color icin illa burenk olsun diyosak  rengi sectikten sonra yanina !important yazariz. sadece renk icin degil diger ozellikler icin de kullaniriz*/
+            background: black;
+        }
+        #logo{
+            color: chartreuse;/* id ye gore secmek icin sececegimiz idnin basina # katariz */
+        }
+
+        p{
+            color: red;
+        }
+
+        .info{
+            color: rgb(2, 51, 51);
+            background: rgb(232, 250, 232);    /* class a gore secmek icin sececegimiz class in basina .  katariz */
+        }
+
+        #logo, .lead{
+            color: darkmagenta; /*id ve claas i ayni anda ayni stil yapacaksak boyle yapairz*/
+        }
+
+
+        #para1.lead{
+            color: deeppink;
+            background: lemonchiffon; /*bu sekilde araya virgul koymazsak burda hem id hemde calas bu ozellikleri tasiyacak demek*/
+        }
+
+        ul li a{
+            text-decoration: none;
+        }
+        /*.info span{
+            color: darkorange;
+        }*/
+
+        .info .primary{
+            color: darkred;
+        }
+        
+        * {
+           
+           font-size: 30px;
+            /* "*" evrensel seçicidir yani html sayfasındaki tüm elemanları seçmek için * ı kullanırız. */
+        }
+    
+    </style>
+</head>
+<body>
+
+    <h1 style="color: red !important;">Baslik1</h1>
+    <h1>Baslik1</h1>
+
+    <h2>Baslik2</h2>
+
+    <h3>Baslik 3</h3>
+    
+    <header>
+        <h1>Header1</h1>
+        <h1 id="logo">Logo</h1>
+
+        <ul>
+            <li>
+                <a href="#">contact</a>
+            </li>
+
+            <li>
+                <a href="#">services</a>
+            </li>
+
+        </ul>
+    </header>
+
+    <h1>
+        Header2
+    </h1>
+
+    <p id="para1" class="lead info">
+        Lorem ipsum dolor, sit amet consectetur adipisicing elit. Soluta, fuga.
+    </p>
+
+    <p class="info">
+        Lorem ipsum, <span class="primary">dolor</span> sit amet consectetur adipisicing elit. Laudantium, ullam.
+    </p>
+    <p class="info">
+        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Laudantium, ullam.
+    </p>
+    <p>Test paragraph</p>
+
+    <a href="#"> Home</a>
+
+</body>
+</html>
